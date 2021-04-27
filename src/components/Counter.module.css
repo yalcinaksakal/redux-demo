@@ -17,11 +17,14 @@
 
 .value {
   font-size: 2rem;
-  color: #3c0080;
+  color: red;
   margin: 2rem 0;
   font-weight: bold;
 }
 
+.counter div {
+  margin: 5px 0;
+}
 .counter button {
-  margin: 1rem;
+  margin: 10px;
 }

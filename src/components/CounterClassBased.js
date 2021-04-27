@@ -3,11 +3,11 @@ import { connect } from "react-redux";
 import classes from "./Counter.module.css";
 
 class CounterClassBased extends Component {
-  incrementHandler() {
-    this.props.increment();
+  incrementHandler(value) {
+    this.props.increment(value);
   }
-  decrementHandler() {
-    this.props.decrement();
+  decrementHandler(value) {
+    this.props.decrement(value);
   }
 
   toggleCounterHandler() {}
@@ -18,8 +18,18 @@ class CounterClassBased extends Component {
         <h1>Redux Class Based Counter</h1>
         <div className={classes.value}>{this.props.counter}</div>
         <div>
-          <button onClick={this.incrementHandler.bind(this)}>Increment</button>
-          <button onClick={this.decrementHandler.bind(this)}>Decrement</button>
+          <button onClick={this.incrementHandler.bind(this, 1)}>
+            Increment
+          </button>
+          <button onClick={this.incrementHandler.bind(this, 5)}>
+            Increase by 5
+          </button>
+          <button onClick={this.decrementHandler.bind(this, 1)}>
+            Decrement
+          </button>
+          <button onClick={this.decrementHandler.bind(this, 5)}>
+            Decrease by 5
+          </button>
         </div>
         <button onClick={this.toggleCounterHandler}>Toggle Counter</button>
       </main>
@@ -33,8 +43,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    increment: () => dispatch({ type: "increment" }),
-    decrement: () => dispatch({ type: "decrement" }),
+    increment: value => dispatch({ type: "increment", value: value }),
+    decrement: value => dispatch({ type: "decrement", value: value }),
   };
 };
 //run connect, it returns a function, then run it by passing your component
