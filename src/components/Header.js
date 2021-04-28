@@ -10,7 +10,7 @@ const Header = () => {
   };
   return (
     <header className={classes.header}>
-      <h1>Redux Auth</h1>
+      <h1>React Redux</h1>
       {isAuthenticated && (
         <nav>
           <ul>
