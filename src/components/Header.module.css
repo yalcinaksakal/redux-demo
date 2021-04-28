@@ -2,9 +2,10 @@
   width: 100%;
   height: 5rem;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #3c0080;
+  background-color: #39b187;
   color: white;
   padding: 0 10%;
 }
@@ -23,20 +24,20 @@
 
 .header a {
   text-decoration: none;
-  color: white;
+  color: #12382b;
   font-size: 1.25rem;
 }
 
 .header a:hover,
 .header a:active {
-  color: #b864da;
+  color: white;
 }
 
 .header button {
   font-size: 1.25rem;
   background-color: #ffbb00;
   border: 1px solid #ffbb00;
-  padding: 0.5rem 1.5rem;
+  padding: 0.3rem 1.5rem;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   color: #2c2922;
 }
@@ -45,4 +46,40 @@
 .header button:active {
   background-color: #ffa600;
   border-color: #ffa600;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .header {
+    padding: 0 5%;
+  }
+  .header li {
+    margin: 0 0.3rem;
+  }
+
+  .header a,
+  .header button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .header {
+    padding: 0 10px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .header {
+    height: 5.5rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header a,
+  .header button {
+    font-size: 0.8rem;
+  }
 }

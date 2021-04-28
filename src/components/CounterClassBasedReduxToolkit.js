@@ -44,7 +44,7 @@ class CounterClassBased extends Component {
 }
 
 const mapStateToProps = state => {
-  return { ...state };
+  return { ...state.counter };
 };
 
 const mapDispatchToProps = dispatch => {
