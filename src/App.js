@@ -9,13 +9,19 @@ import { useSelector } from "react-redux";
 
 function App() {
   const { isAuthenticated } = useSelector(state => state.auth);
- 
+
   return (
     <>
-      <Header></Header>
-      {!isAuthenticated ? <Auth /> : <UserProfile />}
-      <Counter />
-      <CounterClassBased />
+      <Header />
+      {!isAuthenticated ? (
+        <Auth />
+      ) : (
+        <>
+          <UserProfile />
+          <Counter />
+          <CounterClassBased />
+        </>
+      )}
     </>
   );
 }

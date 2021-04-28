@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { connect } from "react-redux";
 import classes from "./Counter.module.css";
-import { counterActions } from "../store/indesReduxToolkit";
+import { counterActions } from "../store/counter-slice";
 class CounterClassBased extends Component {
   incrementHandler(value) {
     this.props.increment(value);
