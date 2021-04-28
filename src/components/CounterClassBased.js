@@ -19,7 +19,7 @@ class CounterClassBased extends Component {
       <main className={classes.counter}>
         <h1>Redux Class Based Counter</h1>
         {this.props.showCounter && (
-          <div className={classes.value}>{this.props.counter}</div>
+          <div className={classes.value}>{this.props.counterC}</div>
         )}
         {this.props.showCounter && (
           <div>

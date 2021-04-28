@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { connect } from "react-redux";
 import classes from "./Counter.module.css";
-import { counterActions } from "../store/counter-slice";
+import { counterCActions } from "../store/counterC-slice";
 class CounterClassBased extends Component {
   incrementHandler(value) {
     this.props.increment(value);
@@ -44,14 +44,14 @@ class CounterClassBased extends Component {
 }
 
 const mapStateToProps = state => {
-  return { ...state.counter };
+  return { ...state.counterC };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    increment: value => dispatch(counterActions.increment({ value })),
-    decrement: value => dispatch(counterActions.decrement({ value })),
-    toogle: () => dispatch(counterActions.toogle()),
+    increment: value => dispatch(counterCActions.increment({ value })),
+    decrement: value => dispatch(counterCActions.decrement({ value })),
+    toogle: () => dispatch(counterCActions.toogle()),
   };
 };
 //run connect, it returns a function, then run it by passing your component

@@ -14,11 +14,11 @@ const Auth = () => {
         <form onSubmit={loginHandler}>
           <div className={classes.control}>
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" />
+            <input type="email" id="email" value="test@test.com" />
           </div>
           <div className={classes.control}>
             <label htmlFor="password">Password</label>
-            <input type="password" id="password" />
+            <input type="password" id="password" value="******" />
           </div>
           <button>Login</button>
         </form>
